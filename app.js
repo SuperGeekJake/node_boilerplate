@@ -16,7 +16,7 @@ app.configure(function() {
     app.use(express.cookieParser());
     app.use(express.bodyParser());
     app.use(express.session({
-        secret: 'sessionbrinksecret'
+        secret: 'sessiontestappsecret'
     }));
     app.use(express.static(__dirname + '/static'));
     app.use(app.router);
