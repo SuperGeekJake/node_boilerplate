@@ -1,4 +1,4 @@
-node_boilerplate
-================
+Node.js Boilerplate
+===========
 
-Sweet pimpin boilerplate
+Sweet pimpin boilerplate code

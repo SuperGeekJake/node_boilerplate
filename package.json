@@ -1,0 +1,17 @@
+{
+    "name": "testApp",
+    "version": "0.0.1",
+    "description": "description",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": "",
+    "author": "Author <email@gmail.com>",
+    "license": "SUPER RESTRICTIVE",
+    "dependencies": {
+        "express": "3.0.x",
+        "jade": "0.30.x",
+        "mongoskin": "0.5.x"
+    }
+}
