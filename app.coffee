@@ -58,9 +58,8 @@ app.get '/', (req, res) ->
 
 io.sockets.on "connection", (socket) ->
     socket.on "chatMessage", (data) ->
-        socket.broadcast.emit "receive-message", 
+        socket.broadcast.emit "receiveMessage", 
         message: data.message
-        console.log "This is a message Event!"
 
 console.log "Running server in mode: " + app.settings.env
 

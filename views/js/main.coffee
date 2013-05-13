@@ -11,3 +11,14 @@ require.config
 
 require ["jquery", "underscore", "util"], ($, _, util) ->
     #Code that needs jquery and underscore and util goes here.
+    socket = io.connect '/'
+
+    socket.on 'receiveMessage', (data) ->
+        $("#chat").append data.message
+
+    sendMessage = (message) ->
+        socket.emit "chatMessage",
+            message: message
+
+    $("input[name=\"send\"]").on "click", (event) ->
+        sendMessage $("input[name=\"msg\"]").val()

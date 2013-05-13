@@ -1,9 +1,10 @@
 doctype 5
 html(lang='en')
     head
-        title= pageTitle
+        title=pageTitle
         link(rel='stylesheet', href='/css/master.css')
         script(data-main='/js/main.js', src='/components/requirejs/require.js')
+        script(src='/socket.io/socket.io.js')
     body
         div#chat
 
