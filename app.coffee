@@ -54,12 +54,12 @@ app.configure ->
 
 app.get '/', (req, res) ->
     res.render "jade/index",
-    pageTitle: 'uberChat - Web Chat Application'
+        pageTitle: 'uberChat - Web Chat Application'
 
 io.sockets.on "connection", (socket) ->
     socket.on "chatMessage", (data) ->
         socket.broadcast.emit "receiveMessage", 
-        message: data.message
+            message: data.message
 
 console.log "Running server in mode: " + app.settings.env
 
