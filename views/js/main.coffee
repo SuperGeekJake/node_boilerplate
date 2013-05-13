@@ -26,3 +26,4 @@ require ["jquery", "underscore", "util"], ($, _, util) ->
 
     $("input[name=\"send\"]").on "click", (event) ->
         sendMessage $("input[name=\"msg\"]").val()
+        $("input[name=\"msg\"]").val("")

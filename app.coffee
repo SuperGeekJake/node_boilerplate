@@ -20,7 +20,8 @@ io = sio.listen(server)
 #set socket.io log level 1-3
 io.set "log level", 1
 io.enable "browser client minification"
-io.enable "browser client gzip"
+# doesn't work in windows :(
+#io.enable "browser client gzip"
 io.enable "browser client etag"
 
 #jade
