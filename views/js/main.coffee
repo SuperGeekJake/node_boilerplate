@@ -14,7 +14,7 @@ require ["jquery", "underscore", "util"], ($, _, util) ->
     socket = io.connect '/'
 
     appendMessage = (message) ->
-        $("#chat").append message
+        $("#chat").append message+"<br>"
 
     sendMessage = (message) ->
         socket.emit "chatMessage",
