@@ -57,7 +57,7 @@ mongo = require('mongoskin')
 db = mongo.db('localhost:27017/testApp?auto_reconnect', {safe: true})
 
 app.get '/', (req, res) ->
-    res.render "index"
+    res.render "jade/index"
 
 io.sockets.on "connection", (socket) ->
     socket.on "testEvent", (data) ->
