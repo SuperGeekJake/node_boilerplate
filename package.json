@@ -2,13 +2,14 @@
     "name": "testApp",
     "version": "0.0.1",
     "description": "description",
-    "main": "app.js",
+    "main": "app.coffee",
     "scripts": {
         "start": "coffee app.coffee",
         "forever-start": "forever -l logfile-art.log -a start -c coffee app.coffee",
         "forever-stop": "forever -a stop -c coffee app.coffee",
         "forever-list": "forever list",
-        "bower": "bower install"
+        "bower": "bower install",
+        "nodemon": "nodemon"
     },
     "repository": "",
     "author": "Author <email@gmail.com>",
@@ -16,7 +17,6 @@
     "dependencies": {
         "express": "3.0.x",
         "jade": "0.30.x",
-        "mongoskin": "0.5.x",
         "socket.io": "0.9.x",
         "jade": "0.30.x",
         "stylus": "0.32.x",
@@ -24,6 +24,7 @@
         "connect-coffee-script": "0.1.x",
         "coffee-script": "1.6.x",
         "forever": "0.10.x",
-        "bower": "0.9.x"
+        "bower": "0.9.x",
+        "nodemon": "*"
     }
 }

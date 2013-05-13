@@ -52,18 +52,21 @@ app.configure ->
     app.use express.static(__dirname + '/static')
     app.use app.router
 
-#mongoskin
-mongo = require('mongoskin')
-db = mongo.db('localhost:27017/testApp?auto_reconnect', {safe: true})
-
 app.get '/', (req, res) ->
-    res.render "jade/index"
+    res.render "jade/index",
+    pageTitle: 'uberChat - Web Chat Application'
 
 io.sockets.on "connection", (socket) ->
-    socket.on "testEvent", (data) ->
-        console.log "This is a test Event!"
+    socket.on "chatMessage", (data) ->
+        socket.broadcast.emit "receive-message", 
+        message: data.message
+        console.log "This is a message Event!"
 
 console.log "Running server in mode: " + app.settings.env
 
 server.listen expressPort
 console.log 'Express on port: ' + expressPort
+
+# fuckme = () ->
+#     return 'No, fuck me!'
+

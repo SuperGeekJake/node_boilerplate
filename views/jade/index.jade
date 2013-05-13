@@ -1,8 +1,12 @@
-!!! 5
+doctype 5
 html(lang='en')
     head
-        title Example
+        title= pageTitle
         link(rel='stylesheet', href='/css/master.css')
         script(data-main='/js/main.js', src='/components/requirejs/require.js')
     body
-        #container
+        div#chat
+
+        div
+          input(type="text", name="msg")
+          input(type="submit", name="send")
